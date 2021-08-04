@@ -28,7 +28,7 @@ class CreatFormRequest extends FormRequest
             'author'=> 'required',
             'price'=>'required',
             'category'=>'required',
-            'description'=>'required|max:255',
+            'description'=>'required',
         ];
     }
 
