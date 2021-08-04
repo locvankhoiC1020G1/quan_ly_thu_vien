@@ -14,9 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/master', function () {
+    return view('master');
 });
+Route::get('',function (){
+   return view('home');
+});
+
 Route::prefix('/admin')->group(function (){
     Route::get('/index',[BookController::class,'index'])->name('home');
     Route::get('/create',[BookController::class,'createBook'])->name('book.create');
