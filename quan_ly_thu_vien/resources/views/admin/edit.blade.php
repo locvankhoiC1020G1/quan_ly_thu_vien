@@ -11,7 +11,7 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<form class="container" action="{{route('book.update',$book->id)}}" method="post">
+<form class="container" action="{{route('book.update',$book->id)}}" method="post" enctype="multipart/form-data">
     @csrf
     <div class="form-group">
         <label for="name">Name</label>

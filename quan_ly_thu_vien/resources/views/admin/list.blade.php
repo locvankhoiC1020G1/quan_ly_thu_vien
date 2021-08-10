@@ -19,6 +19,8 @@
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
     </div>
+    <a class="navbar-brand" href="{{route('signout')}}">Log Out</a>
+
 </nav>
 <table class="table container">
     <thead>

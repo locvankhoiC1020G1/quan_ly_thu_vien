@@ -32,7 +32,7 @@ class BookController extends Controller
             $book->image = $path;
         };
         $book->save();
-        return redirect()->route('home');
+        return redirect()->route('book.home');
     }
 
     public function editBook($id)
@@ -54,7 +54,7 @@ class BookController extends Controller
             $book->image = $path;
         };
         $book->save();
-        return redirect()->route('home');
+        return redirect()->route('book.home');
     }
 
     public function delete($id)

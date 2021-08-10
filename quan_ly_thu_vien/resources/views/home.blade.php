@@ -10,11 +10,11 @@
                 <p>{{$book->author}} </p>
                 <h3>${{$book->price}}</h3>
                 <div class="buy_now_button"><a href="subpage.html">Buy Now</a></div>
-                <div class="detail_button"><a href="subpage.html">Detail</a></div>
+                <div class="detail_button"><a href="{{route('book.detail',$book->id)}}">Detail</a></div>
             </div>
             <div class="cleaner">&nbsp;</div>
         </div>
         @endforeach
-     <a href="subpage.html"><img src="{{asset('images/templatemo_ads.jpg')}}" alt="ads" /></a>
+     <a href="{{route('book.detail',$book->id)}}"><img src="{{asset('images/templatemo_ads.jpg')}}" alt="ads" /></a>
     </div>
 @endsection

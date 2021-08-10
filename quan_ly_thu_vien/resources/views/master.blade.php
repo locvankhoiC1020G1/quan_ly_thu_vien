@@ -15,13 +15,18 @@
 <div id="templatemo_container">
     <div id="templatemo_menu">
         <ul>
-            <li><a href="index.html" class="current">Home</a></li>
+            <li><a href="{{route('home')}}" class="current">Home</a></li>
             <li><a href="subpage.html">Search</a></li>
             <li><a href="subpage.html">Books</a></li>
             <li><a href="subpage.html">New Releases</a></li>
             <li><a href="#">Company</a></li>
             <li><a href="#">Contact</a></li>
+            <li><a href="{{route('login')}}">Login</a></li>
         </ul>
+        <form action="" style="margin-right: auto">
+            <input type="search" name="search" id="">
+            <input type="submit" name="" id="">
+        </form>
     </div> <!-- end of menu -->
 
     <div id="templatemo_header">
@@ -50,15 +55,15 @@
             <div class="templatemo_content_left_section">
                 <h1>Categories</h1>
                 <ul>
-                    <li><a href="subpage.html">Donec accumsan urna</a></li>
-                    <li><a href="subpage.html">Proin vulputate justo</a></li>
-                    <li><a href="#">In sed risus ac feli</a></li>
-                    <li><a href="#">Aliquam tristique dolor</a></li>
-                    <li><a href="#">Maece nas metus</a></li>
-                    <li><a href="#">Sed pellentesque placerat</a></li>
-                    <li><a href="#">Suspen disse</a></li>
-                    <li><a href="#">Maece nas metus</a></li>
-                    <li><a href="#">In sed risus ac feli</a></li>
+                    <li><a href="subpage.html">Textbook</a></li>
+                    <li><a href="subpage.html">Novel</a></li>
+                    <li><a href="#">Encyclopedia</a></li>
+                    <li><a href="#">Thriller book</a></li>
+                    <li><a href="#">Dictionary</a></li>
+                    <li><a href="#">Short story</a></li>
+                    <li><a href="#">Cookery book</a></li>
+                    <li><a href="#">Nonfiction</a></li>
+                    <li><a href="#">Science fiction book</a></li>
                 </ul>
             </div>
             <div class="templatemo_content_left_section">
@@ -87,7 +92,6 @@
 
     <!-- end of content right -->
     <!-- end of content -->
-
     <div id="templatemo_footer">
 
         <a href="subpage.html">Home</a> | <a href="subpage.html">Search</a> | <a href="subpage.html">Books</a> | <a href="#">New Releases</a> | <a href="#">FAQs</a> | <a href="#">Contact Us</a><br />

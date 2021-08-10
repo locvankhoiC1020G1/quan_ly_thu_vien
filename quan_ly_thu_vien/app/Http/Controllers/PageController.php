@@ -12,4 +12,10 @@ class PageController extends Controller
         $books = Books::all();
         return view('home',compact('books'));
     }
+
+    public function detail($id)
+    {
+        $book = Books::findOrFail($id);
+        return view('admin.detail',compact('book'));
+    }
 }
