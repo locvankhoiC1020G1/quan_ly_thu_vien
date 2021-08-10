@@ -10,10 +10,12 @@ use Illuminate\Support\Facades\Session;
 
 class CustomAuthController extends Controller
 {
+
     public function index()
     {
-        Return view('auth.login');
+        return view('auth.login');
     }
+
 
     public function customLogin(Request $request)
     {
@@ -24,16 +26,21 @@ class CustomAuthController extends Controller
 
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('book.home')
+            return redirect()->intended('dashboard')
                 ->withSuccess('Signed in');
         }
 
         return redirect("login")->withSuccess('Login details are not valid');
     }
+
+
+
     public function registration()
     {
         return view('auth.registration');
     }
+
+
     public function customRegistration(Request $request)
     {
         $request->validate([
@@ -47,6 +54,8 @@ class CustomAuthController extends Controller
 
         return redirect("dashboard")->withSuccess('You have signed-in');
     }
+
+
     public function create(array $data)
     {
         return User::create([
@@ -60,11 +69,12 @@ class CustomAuthController extends Controller
     public function dashboard()
     {
         if(Auth::check()){
-            return redirect()->route('book.home');
+            return view('dashboard');
         }
 
         return redirect("login")->withSuccess('You are not allowed to access');
     }
+
 
     public function signOut() {
         Session::flush();
